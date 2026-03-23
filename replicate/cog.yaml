@@ -18,3 +18,4 @@ build:
     - scipy
 
 predict: "interior.py:Predictor"
+image: r8.im/syntaxnomad/interior-redesigner-declutter
