@@ -379,7 +379,6 @@ class Predictor(BasePredictor):
         # Generate
         result = self.pipe(
             prompt=prompt,
-            negative_prompt=negative_prompt,
             control_image=[depth_image, canny_image],
             control_mode=[2, 0],
             controlnet_conditioning_scale=[0.6, 0.4],
