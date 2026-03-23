@@ -3,6 +3,7 @@ name: Push to Replicate
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   push:
