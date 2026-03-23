@@ -2,7 +2,7 @@ build:
   gpu: true
   cuda: "12.1"
   python_version: "3.11"
-  python_packages:
+  python_requirements:
     - torch==2.3.0
     - torchvision==0.18.0
     - diffusers==0.32.0

@@ -280,31 +280,22 @@ class Predictor(BasePredictor):
         self.depth_estimator = None
         self.pipe = None
         self._models_loaded = False
-        self._load_models()
 
-    def _load_models(self, hf_token: Optional[str] = None):
+    def _load_models(self):
         if self._models_loaded:
             return
-
-        # Accept token from Secret input first, then environment fallback.
-        if not hf_token:
-            hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HF_APIKEY")
-
-        if hf_token:
-            from huggingface_hub import login
-            login(token=hf_token)
 
         print("Loading depth estimator...")
         self.depth_estimator = hf_pipeline(
             "depth-estimation",
             model="depth-anything/Depth-Anything-V2-Small-hf",
-            device=0,
+            device = 0 if torch.cuda.is_available() else -1,
         )
 
         print("Loading ControlNet Union Pro 2.0...")
         controlnet_union = FluxControlNetModel.from_pretrained(
             "Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro-2.0",
-            torch_dtype=torch.bfloat16,
+            torch_dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
         controlnet = FluxMultiControlNetModel([controlnet_union])
 
@@ -314,12 +305,14 @@ class Predictor(BasePredictor):
             controlnet=controlnet,
             torch_dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
+
         self.pipe.enable_model_cpu_offload()
         self.pipe.enable_attention_slicing()
 
         self._models_loaded = True
-        print("Setup complete.")
 
+        self.pipe.to("cuda" if torch.cuda.is_available() else "cpu")
+        print("Setup complete.")
     def predict(
         self,
         image: Path = Input(description="Photo of your room"),
@@ -344,14 +337,21 @@ class Predictor(BasePredictor):
     ) -> Path:
 
         token_value = hf_token.get_secret_value() if hf_token else None
-        try:
-            self._load_models(token_value)
-        except Exception as e:
-            raise RuntimeError(
-                "Model initialization failed. If access is gated, provide hf_token as a Secret input "
-                "or set HF_TOKEN in environment."
-            ) from e
 
+        if not self._models_loaded:
+            if not token_value:
+                raise ValueError("HuggingFace token is required for the first run")
+
+            from huggingface_hub import login
+            login(token=token_value)
+
+            try:
+                self._load_models()
+            except Exception as e:
+                raise RuntimeError(
+                    "Model initialization failed. Check HF access or dependencies."
+                ) from e
+                
         if style not in STYLES[room_type]:
             available = list(STYLES[room_type].keys())
             raise ValueError(f"Style '{style}' not available for '{room_type}'. Choose from: {available}")
