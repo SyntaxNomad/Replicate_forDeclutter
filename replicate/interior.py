@@ -19,14 +19,9 @@ STYLES = {
                 "sculptural bedside lamps, textured wall paneling, deep walnut wood floor, "
                 "layered neutral textiles, ambient warm lighting, statement artwork above bed. "
                 "Rich materials, considered design, no clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces "
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, coffee table, chairs, "
-                "wrong furniture, kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, cold, sterile, plain white walls"
-            ),
+        
         },
         "minimalist": {
             "prompt": (
@@ -34,54 +29,33 @@ STYLES = {
                 "simple white nightstand, bare white walls, light bleached oak or pale concrete floor, "
                 "single recessed light, no decorations, nothing on surfaces, "
                 "all white and off-white palette, only small black accents if any. "
-                "Architectural photography, sharp focus, 8k, photorealistic."
-            ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, chairs, wrong furniture, "
-                "kitchen, bathroom, person, people, face, clothes, laundry, clutter, decorations, art, plants, "
-                "blurry, low quality, cartoon, busy, colorful, dark colors, black sofa, black bed, "
-                "brown, grey, beige, warm tones, headboard"
-            ),
+                "Architectural photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
+            )
+           
         },
         "scandinavian": {
             "prompt": (
                 "A scandinavian hygge bedroom. Simple birch bed frame with white bedding, "
                 "warm white walls, pine wood floor, soft pendant lamp, small plant. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, chairs, wrong furniture, "
-                "kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, cold, industrial"
-            ),
+          
         },
         "industrial": {
             "prompt": (
                 "An industrial loft bedroom. Black metal bed frame, exposed brick wall, "
                 "polished concrete floor, Edison pendant bulbs, black iron shelving. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, chairs, wrong furniture, "
-                "kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, pastel, floral"
-            ),
+          
         },
         "bohemian": {
             "prompt": (
                 "A bohemian bedroom. Low wooden bed with layered terracotta textiles, "
                 "woven rug, macrame wall hanging, brass pendant, trailing plants, earthy walls. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, chairs, wrong furniture, "
-                "kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, cold, sterile"
-            ),
+           
         },
     },
     "living_room": {
@@ -89,15 +63,11 @@ STYLES = {
             "prompt": (
                 "A contemporary modern living room. Large curved sectional sofa in warm bouclé, "
                 "sculptural marble coffee table, warm oak floor, textured plaster walls, "
-                "dramatic pendant light, layered rugs, curated art and objects. "
+                "dramatic pendant light, layered rugs, curated art and objects "
                 "Rich and considered design, no clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, plain white walls, sterile"
-            ),
+           
         },
         "minimalist": {
             "prompt": (
@@ -106,51 +76,33 @@ STYLES = {
                 "no art, no plants, no decorations, nothing on surfaces, "
                 "one thin white floor lamp, complete emptiness. "
                 "All white and off-white palette, only small black accents if any. "
-                "Architectural photography, sharp focus, 8k, photorealistic."
+                "Architectural photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, decorations, art, plants, rugs, "
-                "blurry, low quality, cartoon, busy, colorful, dark colors, black sofa, "
-                "brown, grey, beige, warm tones"
-            ),
+          
         },
         "scandinavian": {
             "prompt": (
                 "A scandinavian living room. Linen sofa, birch coffee table, white walls, "
                 "oak floor, woolen throw, small plant. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, industrial"
-            ),
+          
         },
         "industrial": {
             "prompt": (
                 "An industrial living room. Dark leather sofa, steel coffee table, "
                 "concrete wall, Edison bulbs, metal shelving. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, pastel"
-            ),
+           
         },
         "bohemian": {
             "prompt": (
                 "A bohemian living room. Colorful cushions, kilim rugs, macrame, rattan, "
                 "trailing plants, string lights, terracotta walls. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, sterile"
-            ),
+           
         },
     },
     "bathroom": {
@@ -159,14 +111,9 @@ STYLES = {
                 "A contemporary modern bathroom. Freestanding sculptural soaking tub, "
                 "large format warm stone tiles, floating double vanity, brushed gold fixtures, "
                 "backlit frameless mirror, warm ambient lighting, single large plant. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, kitchen, "
-                "person, people, face, toiletries mess, clutter, "
-                "blurry, low quality, cartoon, cold, sterile, white tiles"
-            ),
+         
         },
         "minimalist": {
             "prompt": (
@@ -174,39 +121,25 @@ STYLES = {
                 "white or off-white walls, pale concrete or white tile floor, single thin mirror, "
                 "one recessed light, no decorations, no plants, no toiletries visible. "
                 "All white and off-white palette, thin black fixtures as only accent. "
-                "Architectural photography, sharp focus, 8k, photorealistic."
+                "Architectural photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, kitchen, "
-                "person, people, face, clutter, decorations, plants, toiletries, "
-                "blurry, low quality, cartoon, colorful, dark colors, black surfaces, "
-                "brown, beige, warm tones, busy"
-            ),
+           
         },
         "spa": {
             "prompt": (
                 "A luxury spa bathroom. Travertine stone, deep soaking tub, rainfall shower, "
                 "teak accents, ambient lighting, tropical plants. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, kitchen, "
-                "person, people, face, clutter, blurry, low quality, cartoon, industrial"
-            ),
+          
         },
         "industrial": {
             "prompt": (
                 "An industrial bathroom. Concrete walls, black fixtures, vessel sink, "
                 "Edison mirror, black hexagon tiles. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, kitchen, "
-                "person, people, face, clutter, blurry, low quality, cartoon, pastel, floral"
-            ),
+          
         },
     },
     "kitchen": {
@@ -216,14 +149,9 @@ STYLES = {
                 "thick marble island with waterfall edge, statement pendant lights, "
                 "integrated appliances, warm under-cabinet lighting, herringbone tile backsplash. "
                 "Counters clear, considered design. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, bathroom, "
-                "person, people, face, dirty dishes, clutter, "
-                "blurry, low quality, cartoon, rustic, all white, plain"
-            ),
+          
         },
         "minimalist": {
             "prompt": (
@@ -232,41 +160,25 @@ STYLES = {
                 "single strip of recessed light, no objects on any surface, "
                 "white walls, pale concrete or white tile floor. "
                 "All white and off-white palette, thin black handles as only accent. "
-                "Architectural photography, sharp focus, 8k, photorealistic."
+                "Architectural photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, bathroom, "
-                "person, people, face, dirty dishes, clutter, decorations, plants, "
-                "blurry, low quality, cartoon, rustic, colorful, dark colors, black cabinets, "
-                "brown, beige, warm tones, busy"
-            ),
+           
         },
         "rustic": {
             "prompt": (
                 "A rustic farmhouse kitchen. Shaker oak cabinets, butcher block counters, "
                 "farmhouse sink, open shelving, exposed beams. Counters clear. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, bathroom, "
-                "person, people, face, dirty dishes, clutter, "
-                "blurry, low quality, cartoon, modern, cold"
-            ),
+          
         },
         "industrial": {
             "prompt": (
                 "An industrial kitchen. Stainless steel counters, black cabinets, "
                 "exposed brick, metal shelving, Edison bulbs. Counters clear. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, bathroom, "
-                "person, people, face, dirty dishes, clutter, "
-                "blurry, low quality, cartoon, pastel"
-            ),
+          
         },
     },
 }
@@ -306,12 +218,11 @@ class Predictor(BasePredictor):
             torch_dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
 
-        self.pipe.enable_model_cpu_offload()
-        self.pipe.enable_attention_slicing()
-
-        self._models_loaded = True
 
         self.pipe.to("cuda" if torch.cuda.is_available() else "cpu")
+        self.pipe.enable_attention_slicing()
+        self._models_loaded = True
+
         print("Setup complete.")
     def predict(
         self,
@@ -356,13 +267,13 @@ class Predictor(BasePredictor):
             available = list(STYLES[room_type].keys())
             raise ValueError(f"Style '{style}' not available for '{room_type}'. Choose from: {available}")
 
-        input_image = Image.open(str(image)).convert("RGB").resize((640, 640), Image.LANCZOS)
+        input_image = Image.open(str(image)).convert("RGB").resize((512, 512), Image.LANCZOS)
 
         style_config    = STYLES[room_type][style]
         prompt          = style_config["prompt"]
         if extra_prompt.strip():
             prompt = prompt + " " + extra_prompt.strip() + "."
-        negative_prompt = style_config["negative_prompt"]
+        negative_prompt = style_config.get("negative_prompt", "")
 
         print(f"Room: {room_type} | Style: {style}")
 
@@ -370,23 +281,18 @@ class Predictor(BasePredictor):
         depth = self.depth_estimator(input_image)["depth"]
         depth_image = depth.convert("RGB").resize(input_image.size)
 
-        # Canny edges
-        img_array = np.array(input_image)
-        gray      = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
-        edges     = cv2.Canny(gray, 80, 180)
-        canny_image = Image.fromarray(cv2.cvtColor(edges, cv2.COLOR_GRAY2RGB))
 
         # Generate
         result = self.pipe(
             prompt=prompt,
-            control_image=[depth_image, canny_image],
-            control_mode=[2, 0],
-            controlnet_conditioning_scale=[0.6, 0.4],
-            control_guidance_end=0.6,
-            num_inference_steps=4,
-            guidance_scale=0,
-            height=640,
-            width=640,
+            control_image=[depth_image],
+            control_mode=[2],
+            controlnet_conditioning_scale=[0.8],
+            control_guidance_end=0.8,
+            num_inference_steps=8,
+            guidance_scale=3.5,
+            height=512,
+            width=512,
         ).images[0]
 
         fd, tmp = tempfile.mkstemp(suffix=".png")
