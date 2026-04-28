@@ -229,7 +229,12 @@ class Predictor(BasePredictor):
         ),
     ) -> Path:
 
-        token_value = hf_token.get_secret_value() if hf_token else None
+        if hf_token is None:
+            token_value = None
+        elif isinstance(hf_token, str):
+            token_value = hf_token
+        else:
+            token_value = hf_token.get_secret_value()
 
         if not self._models_loaded:
             if not token_value:
