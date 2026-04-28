@@ -59,7 +59,7 @@ STYLES = {
             "prompt": (
                 "A contemporary modern living room. Large curved sectional sofa in warm bouclé, "
                 "sculptural marble coffee table, warm oak floor, textured plaster walls, "
-                "dramatic pendant light, layered rugs, curated art and objects. "
+                "dramatic pendant light, layered rugs, curated art and objects "
                 "Rich and considered design, no clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
@@ -203,6 +203,7 @@ class Predictor(BasePredictor):
         self.pipe.to("cuda" if torch.cuda.is_available() else "cpu")
         self.pipe.enable_attention_slicing()
         self._models_loaded = True
+
         print("Setup complete.")
 
     def predict(
@@ -233,8 +234,10 @@ class Predictor(BasePredictor):
         if not self._models_loaded:
             if not token_value:
                 raise ValueError("HuggingFace token is required for the first run")
+
             from huggingface_hub import login
             login(token=token_value)
+
             try:
                 self._load_models()
             except Exception as e:
@@ -248,12 +251,13 @@ class Predictor(BasePredictor):
 
         input_image = Image.open(str(image)).convert("RGB").resize((512, 512), Image.LANCZOS)
 
-        prompt = STYLES[room_type][style]["prompt"]
+        style_config = STYLES[room_type][style]
+        prompt = style_config["prompt"]
         if extra_prompt.strip():
-            prompt = prompt.rstrip(". ") + ", " + extra_prompt.strip() + "."
+            prompt = prompt + " " + extra_prompt.strip() + "."
+        negative_prompt = style_config.get("negative_prompt", "")
 
         print(f"Room: {room_type} | Style: {style}")
-        print(f"Prompt: {prompt}")
 
         # Depth map
         depth = self.depth_estimator(input_image)["depth"]
