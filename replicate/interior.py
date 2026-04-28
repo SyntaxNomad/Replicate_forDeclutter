@@ -19,7 +19,7 @@ STYLES = {
                 "sculptural bedside lamps, textured wall paneling, deep walnut wood floor, "
                 "layered neutral textiles, ambient warm lighting, statement artwork above bed. "
                 "Rich materials, considered design, no clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces "
             ),
         },
         "minimalist": {
@@ -29,28 +29,28 @@ STYLES = {
                 "one slim sculptural nightstand in pale wood, single architectural pendant light in matte white, "
                 "clean uncluttered surfaces, soft natural light from large window. "
                 "Warm, calm, breathable space. No decorations, no art, no plants, no rugs. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "scandinavian": {
             "prompt": (
                 "A scandinavian hygge bedroom. Simple birch bed frame with white bedding, "
                 "warm white walls, pine wood floor, soft pendant lamp, small plant. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "industrial": {
             "prompt": (
                 "An industrial loft bedroom. Black metal bed frame, exposed brick wall, "
                 "polished concrete floor, Edison pendant bulbs, black iron shelving. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "bohemian": {
             "prompt": (
                 "A bohemian bedroom. Low wooden bed with layered terracotta textiles, "
                 "woven rug, macrame wall hanging, brass pendant, trailing plants, earthy walls. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
     },
@@ -61,7 +61,7 @@ STYLES = {
                 "sculptural marble coffee table, warm oak floor, textured plaster walls, "
                 "dramatic pendant light, layered rugs, curated art and objects. "
                 "Rich and considered design, no clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "minimalist": {
@@ -71,28 +71,28 @@ STYLES = {
                 "one architectural floor lamp in matte white, clean uncluttered surfaces, "
                 "large window with soft natural light flooding the room. "
                 "Warm, calm, breathable space. No art, no plants, no rugs, no decorations. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "scandinavian": {
             "prompt": (
                 "A scandinavian living room. Linen sofa, birch coffee table, white walls, "
                 "oak floor, woolen throw, small plant. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "industrial": {
             "prompt": (
                 "An industrial living room. Dark leather sofa, steel coffee table, "
                 "concrete wall, Edison bulbs, metal shelving. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "bohemian": {
             "prompt": (
                 "A bohemian living room. Colorful cushions, kilim rugs, macrame, rattan, "
                 "trailing plants, string lights, terracotta walls. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
     },
@@ -102,7 +102,7 @@ STYLES = {
                 "A contemporary modern bathroom. Freestanding sculptural soaking tub, "
                 "large format warm stone tiles, floating double vanity, brushed gold fixtures, "
                 "backlit frameless mirror, warm ambient lighting, single large plant. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "minimalist": {
@@ -112,21 +112,21 @@ STYLES = {
                 "single large frameless mirror, brushed brass or matte black fixtures, "
                 "recessed warm lighting, clean uncluttered surfaces, no toiletries visible. "
                 "Warm, calm, spa-like atmosphere. No decorations, no plants. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "spa": {
             "prompt": (
                 "A luxury spa bathroom. Travertine stone, deep soaking tub, rainfall shower, "
                 "teak accents, ambient lighting, tropical plants. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "industrial": {
             "prompt": (
                 "An industrial bathroom. Concrete walls, black fixtures, vessel sink, "
                 "Edison mirror, black hexagon tiles. No clutter. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
     },
@@ -137,7 +137,7 @@ STYLES = {
                 "thick marble island with waterfall edge, statement pendant lights, "
                 "integrated appliances, warm under-cabinet lighting, herringbone tile backsplash. "
                 "Counters clear, considered design. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "minimalist": {
@@ -147,21 +147,21 @@ STYLES = {
                 "warm under-cabinet lighting, light oak or concrete floor, "
                 "all surfaces completely clear, no objects visible anywhere. "
                 "Warm, calm, breathable space. No decorations, no plants. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "rustic": {
             "prompt": (
                 "A rustic farmhouse kitchen. Shaker oak cabinets, butcher block counters, "
                 "farmhouse sink, open shelving, exposed beams. Counters clear. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
         "industrial": {
             "prompt": (
                 "An industrial kitchen. Stainless steel counters, black cabinets, "
                 "exposed brick, metal shelving, Edison bulbs. Counters clear. "
-                "Interior photography, sharp focus, 8k, photorealistic."
+                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
     },
@@ -170,37 +170,26 @@ STYLES = {
 
 class Predictor(BasePredictor):
 
-
-
     def setup(self):
         self.depth_estimator = None
         self.pipe = None
         self._models_loaded = False
-        self._load_models()
 
-    def _load_models(self, hf_token: Optional[str] = None):
+    def _load_models(self):
         if self._models_loaded:
             return
-
-        # Accept token from Secret input first, then environment fallback.
-        if not hf_token:
-            hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HF_APIKEY")
-
-        if hf_token:
-            from huggingface_hub import login
-            login(token=hf_token)
 
         print("Loading depth estimator...")
         self.depth_estimator = hf_pipeline(
             "depth-estimation",
             model="depth-anything/Depth-Anything-V2-Small-hf",
-            device=0,
+            device=0 if torch.cuda.is_available() else -1,
         )
 
         print("Loading ControlNet Union Pro 2.0...")
         controlnet_union = FluxControlNetModel.from_pretrained(
             "Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro-2.0",
-            torch_dtype=torch.bfloat16,
+            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
         controlnet = FluxMultiControlNetModel([controlnet_union])
 
@@ -208,11 +197,11 @@ class Predictor(BasePredictor):
         self.pipe = FluxControlNetPipeline.from_pretrained(
             "black-forest-labs/FLUX.1-schnell",
             controlnet=controlnet,
-            torch_dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
-        self.pipe.enable_model_cpu_offload()
-        self.pipe.enable_attention_slicing()
 
+        self.pipe.to("cuda" if torch.cuda.is_available() else "cpu")
+        self.pipe.enable_attention_slicing()
         self._models_loaded = True
         print("Setup complete.")
 
@@ -240,48 +229,47 @@ class Predictor(BasePredictor):
     ) -> Path:
 
         token_value = hf_token.get_secret_value() if hf_token else None
-        try:
-            self._load_models(token_value)
-        except Exception as e:
-            raise RuntimeError(
-                "Model initialization failed. If access is gated, provide hf_token as a Secret input "
-                "or set HF_TOKEN in environment."
-            ) from e
+
+        if not self._models_loaded:
+            if not token_value:
+                raise ValueError("HuggingFace token is required for the first run")
+            from huggingface_hub import login
+            login(token=token_value)
+            try:
+                self._load_models()
+            except Exception as e:
+                raise RuntimeError(
+                    "Model initialization failed. Check HF access or dependencies."
+                ) from e
 
         if style not in STYLES[room_type]:
             available = list(STYLES[room_type].keys())
             raise ValueError(f"Style '{style}' not available for '{room_type}'. Choose from: {available}")
 
-        input_image = Image.open(str(image)).convert("RGB").resize((640, 640), Image.LANCZOS)
+        input_image = Image.open(str(image)).convert("RGB").resize((512, 512), Image.LANCZOS)
 
-        style_config = STYLES[room_type][style]
-        prompt = style_config["prompt"]
+        prompt = STYLES[room_type][style]["prompt"]
         if extra_prompt.strip():
-            prompt = prompt + " " + extra_prompt.strip() + "."
+            prompt = prompt.rstrip(". ") + ", " + extra_prompt.strip() + "."
 
         print(f"Room: {room_type} | Style: {style}")
+        print(f"Prompt: {prompt}")
 
         # Depth map
         depth = self.depth_estimator(input_image)["depth"]
         depth_image = depth.convert("RGB").resize(input_image.size)
 
-        # Canny edges
-        img_array = np.array(input_image)
-        gray      = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
-        edges     = cv2.Canny(gray, 80, 180)
-        canny_image = Image.fromarray(cv2.cvtColor(edges, cv2.COLOR_GRAY2RGB))
-
         # Generate
         result = self.pipe(
             prompt=prompt,
-            control_image=[depth_image, canny_image],
-            control_mode=[2, 0],
-            controlnet_conditioning_scale=[0.6, 0.4],
-            control_guidance_end=0.6,
-            num_inference_steps=4,
-            guidance_scale=0,
-            height=640,
-            width=640,
+            control_image=[depth_image],
+            control_mode=[2],
+            controlnet_conditioning_scale=[0.8],
+            control_guidance_end=0.8,
+            num_inference_steps=8,
+            guidance_scale=3.5,
+            height=512,
+            width=512,
         ).images[0]
 
         fd, tmp = tempfile.mkstemp(suffix=".png")
