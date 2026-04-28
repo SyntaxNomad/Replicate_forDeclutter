@@ -21,12 +21,6 @@ STYLES = {
                 "Rich materials, considered design, no clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, coffee table, chairs, "
-                "wrong furniture, kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, cold, sterile, plain white walls"
-            ),
         },
         "minimalist": {
             "prompt": (
@@ -37,24 +31,12 @@ STYLES = {
                 "Warm, calm, breathable space. No decorations, no art, no plants, no rugs. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, watermark, signature, logo, busy patterns, clutter, decorations, art, plants, rugs, "
-                "dark colors, cold lighting, sterile, clinical, black and white, monochrome, grayscale, "
-                "person, people, face, blurry, low quality, cartoon, painting, render, "
-                "dining table, chairs, kitchen, bathroom, laundry"
-            ),
         },
         "scandinavian": {
             "prompt": (
                 "A scandinavian hygge bedroom. Simple birch bed frame with white bedding, "
                 "warm white walls, pine wood floor, soft pendant lamp, small plant. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
-            ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, chairs, wrong furniture, "
-                "kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, cold, industrial"
             ),
         },
         "industrial": {
@@ -63,24 +45,12 @@ STYLES = {
                 "polished concrete floor, Edison pendant bulbs, black iron shelving. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, chairs, wrong furniture, "
-                "kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, pastel, floral"
-            ),
         },
         "bohemian": {
             "prompt": (
                 "A bohemian bedroom. Low wooden bed with layered terracotta textiles, "
                 "woven rug, macrame wall hanging, brass pendant, trailing plants, earthy walls. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
-            ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, dining table, chairs, wrong furniture, "
-                "kitchen, bathroom, person, people, face, clothes, laundry, clutter, "
-                "blurry, low quality, cartoon, cold, sterile"
             ),
         },
     },
@@ -93,11 +63,6 @@ STYLES = {
                 "Rich and considered design, no clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, plain white walls, sterile"
-            ),
         },
         "minimalist": {
             "prompt": (
@@ -108,23 +73,12 @@ STYLES = {
                 "Warm, calm, breathable space. No art, no plants, no rugs, no decorations. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, watermark, signature, logo, busy patterns, clutter, decorations, art, plants, rugs, "
-                "dark colors, cold lighting, sterile, clinical, black and white, monochrome, grayscale, "
-                "person, people, face, blurry, low quality, cartoon, painting, render, "
-                "bed, bedroom, bathroom, kitchen"
-            ),
         },
         "scandinavian": {
             "prompt": (
                 "A scandinavian living room. Linen sofa, birch coffee table, white walls, "
                 "oak floor, woolen throw, small plant. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
-            ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, industrial"
             ),
         },
         "industrial": {
@@ -133,22 +87,12 @@ STYLES = {
                 "concrete wall, Edison bulbs, metal shelving. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, pastel"
-            ),
         },
         "bohemian": {
             "prompt": (
                 "A bohemian living room. Colorful cushions, kilim rugs, macrame, rattan, "
                 "trailing plants, string lights, terracotta walls. "
                 "Interior photography, sharp focus, 8k, photorealistic."
-            ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, bathroom, kitchen, wrong furniture, "
-                "person, people, face, clutter, blurry, low quality, cartoon, sterile"
             ),
         },
     },
@@ -160,12 +104,6 @@ STYLES = {
                 "backlit frameless mirror, warm ambient lighting, single large plant. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, kitchen, "
-                "person, people, face, toiletries mess, clutter, "
-                "blurry, low quality, cartoon, cold, sterile, white tiles"
-            ),
         },
         "minimalist": {
             "prompt": (
@@ -176,12 +114,6 @@ STYLES = {
                 "Warm, calm, spa-like atmosphere. No decorations, no plants. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, watermark, signature, logo, busy patterns, clutter, decorations, plants, toiletries, "
-                "dark colors, cold lighting, sterile, clinical, black and white, monochrome, grayscale, "
-                "person, people, face, blurry, low quality, cartoon, painting, render, "
-                "bed, bedroom, living room, kitchen"
-            ),
         },
         "spa": {
             "prompt": (
@@ -189,22 +121,12 @@ STYLES = {
                 "teak accents, ambient lighting, tropical plants. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, kitchen, "
-                "person, people, face, clutter, blurry, low quality, cartoon, industrial"
-            ),
         },
         "industrial": {
             "prompt": (
                 "An industrial bathroom. Concrete walls, black fixtures, vessel sink, "
                 "Edison mirror, black hexagon tiles. No clutter. "
                 "Interior photography, sharp focus, 8k, photorealistic."
-            ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, kitchen, "
-                "person, people, face, clutter, blurry, low quality, cartoon, pastel, floral"
             ),
         },
     },
@@ -217,12 +139,6 @@ STYLES = {
                 "Counters clear, considered design. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, bathroom, "
-                "person, people, face, dirty dishes, clutter, "
-                "blurry, low quality, cartoon, rustic, all white, plain"
-            ),
         },
         "minimalist": {
             "prompt": (
@@ -233,24 +149,12 @@ STYLES = {
                 "Warm, calm, breathable space. No decorations, no plants. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, watermark, signature, logo, busy patterns, clutter, decorations, plants, dirty dishes, "
-                "dark colors, cold lighting, sterile, clinical, black and white, monochrome, grayscale, "
-                "person, people, face, blurry, low quality, cartoon, painting, render, "
-                "bed, bedroom, living room, bathroom"
-            ),
         },
         "rustic": {
             "prompt": (
                 "A rustic farmhouse kitchen. Shaker oak cabinets, butcher block counters, "
                 "farmhouse sink, open shelving, exposed beams. Counters clear. "
                 "Interior photography, sharp focus, 8k, photorealistic."
-            ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, bathroom, "
-                "person, people, face, dirty dishes, clutter, "
-                "blurry, low quality, cartoon, modern, cold"
             ),
         },
         "industrial": {
@@ -259,41 +163,14 @@ STYLES = {
                 "exposed brick, metal shelving, Edison bulbs. Counters clear. "
                 "Interior photography, sharp focus, 8k, photorealistic."
             ),
-            "negative_prompt": (
-                "text, writing, letters, words, numbers, watermark, signature, logo, typography, "
-                "font, alphabet, symbols, inscriptions, bed, bedroom, living room, bathroom, "
-                "person, people, face, dirty dishes, clutter, "
-                "blurry, low quality, cartoon, pastel"
-            ),
         },
     },
 }
 
-# Photography suffix extracted as a constant so extra_prompt is always
-# injected before it, keeping it part of the scene description rather
-# than appended after the closing instruction where the model ignores it.
-_PHOTO_SUFFIX = "Interior photography, sharp focus, 8k, photorealistic."
-
-
-def _build_prompt(base_prompt: str, extra_prompt: str) -> str:
-    """
-    Inject extra_prompt into the scene description, before the photography
-    suffix. If the suffix is not found (shouldn't happen, but safe fallback),
-    just append to the end.
-    """
-    extra = extra_prompt.strip()
-    if not extra:
-        return base_prompt
-
-    if _PHOTO_SUFFIX in base_prompt:
-        scene = base_prompt.replace(_PHOTO_SUFFIX, "").rstrip()
-        return f"{scene} {extra}. {_PHOTO_SUFFIX}"
-
-    # Fallback: just append
-    return f"{base_prompt} {extra}."
-
 
 class Predictor(BasePredictor):
+
+
 
     def setup(self):
         self.depth_estimator = None
@@ -331,7 +208,7 @@ class Predictor(BasePredictor):
         self.pipe = FluxControlNetPipeline.from_pretrained(
             "black-forest-labs/FLUX.1-schnell",
             controlnet=controlnet,
-            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+            torch_dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
         self.pipe.enable_model_cpu_offload()
         self.pipe.enable_attention_slicing()
@@ -377,27 +254,26 @@ class Predictor(BasePredictor):
 
         input_image = Image.open(str(image)).convert("RGB").resize((640, 640), Image.LANCZOS)
 
-        style_config    = STYLES[room_type][style]
-        prompt          = _build_prompt(style_config["prompt"], extra_prompt)
-        negative_prompt = style_config["negative_prompt"]
+        style_config = STYLES[room_type][style]
+        prompt = style_config["prompt"]
+        if extra_prompt.strip():
+            prompt = prompt + " " + extra_prompt.strip() + "."
 
         print(f"Room: {room_type} | Style: {style}")
-        print(f"Prompt: {prompt}")
 
         # Depth map
         depth = self.depth_estimator(input_image)["depth"]
         depth_image = depth.convert("RGB").resize(input_image.size)
 
         # Canny edges
-        img_array   = np.array(input_image)
-        gray        = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
-        edges       = cv2.Canny(gray, 80, 180)
+        img_array = np.array(input_image)
+        gray      = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
+        edges     = cv2.Canny(gray, 80, 180)
         canny_image = Image.fromarray(cv2.cvtColor(edges, cv2.COLOR_GRAY2RGB))
 
         # Generate
         result = self.pipe(
             prompt=prompt,
-            negative_prompt=negative_prompt,
             control_image=[depth_image, canny_image],
             control_mode=[2, 0],
             controlnet_conditioning_scale=[0.6, 0.4],
