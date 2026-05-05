@@ -27,8 +27,10 @@ STYLES = {
                 "A serene minimalist bedroom interior. Low platform bed with crisp white and warm ivory linen, "
                 "natural light oak hardwood floor, soft warm white walls with subtle texture, "
                 "one slim sculptural nightstand in pale wood, single architectural pendant light in matte white, "
-                "clean uncluttered surfaces, soft natural light from large window. "
-                "Warm, calm, breathable space. No decorations, no art, no plants, no rugs. "
+                "large window with soft natural light flooding the room. "
+                "Warm, calm, breathable space. Floor completely bare and empty. All surfaces completely clear. "
+                "No clothing, no laundry, no clothes on floor, no items on bed except bedding, "
+                "no bags, no shoes, no personal belongings, no decorations, no art, no plants, no rugs. "
                 "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
@@ -68,9 +70,11 @@ STYLES = {
             "prompt": (
                 "A serene minimalist living room interior. Single low-profile sofa in warm ivory or soft greige linen, "
                 "slim pale oak or walnut coffee table, soft warm white walls, light oak hardwood floor, "
-                "one architectural floor lamp in matte white, clean uncluttered surfaces, "
+                "one architectural floor lamp in matte white, "
                 "large window with soft natural light flooding the room. "
-                "Warm, calm, breathable space. No art, no plants, no rugs, no decorations. "
+                "Warm, calm, breathable space. Floor completely bare and empty. All surfaces completely clear. "
+                "No clothing, no laundry, no items on floor or sofa except cushions, "
+                "no bags, no shoes, no personal belongings, no art, no plants, no rugs, no decorations. "
                 "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
@@ -109,9 +113,10 @@ STYLES = {
             "prompt": (
                 "A serene minimalist bathroom interior. Floating white vanity with undermount basin, "
                 "warm white plaster or large-format stone walls, light travertine or concrete floor, "
-                "single large frameless mirror, brushed brass or matte black fixtures, "
-                "recessed warm lighting, clean uncluttered surfaces, no toiletries visible. "
-                "Warm, calm, spa-like atmosphere. No decorations, no plants. "
+                "single large frameless mirror, brushed brass or matte black fixtures, recessed warm lighting. "
+                "Warm, calm, spa-like atmosphere. Floor completely bare and empty. All surfaces completely clear. "
+                "No toiletries, no towels on floor, no clothing, no laundry, no personal items visible anywhere, "
+                "no decorations, no plants. "
                 "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
@@ -144,9 +149,10 @@ STYLES = {
             "prompt": (
                 "A serene minimalist kitchen interior. Seamless handleless cabinets in warm white or soft greige, "
                 "thick stone or concrete countertop, fully integrated hidden appliances, "
-                "warm under-cabinet lighting, light oak or concrete floor, "
-                "all surfaces completely clear, no objects visible anywhere. "
-                "Warm, calm, breathable space. No decorations, no plants. "
+                "warm under-cabinet lighting, light oak or concrete floor. "
+                "Warm, calm, breathable space. Floor completely bare and empty. All counters and surfaces completely clear. "
+                "No dishes, no appliances on counter, no food, no clothing, no laundry, no personal items, "
+                "no decorations, no plants. "
                 "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
             ),
         },
@@ -254,13 +260,27 @@ class Predictor(BasePredictor):
             available = list(STYLES[room_type].keys())
             raise ValueError(f"Style '{style}' not available for '{room_type}'. Choose from: {available}")
 
-        input_image = Image.open(str(image)).convert("RGB").resize((512, 512), Image.LANCZOS)
+        input_image = Image.open(str(image)).convert("RGB").resize((768, 768), Image.LANCZOS)
 
         style_config = STYLES[room_type][style]
         prompt = style_config["prompt"]
+
+        # Insert extra_prompt before the photography quality tags so it gets full attention weight
         if extra_prompt.strip():
-            prompt = prompt + " " + extra_prompt.strip() + "."
-        negative_prompt = style_config.get("negative_prompt", "")
+            quality_marker = "Interior photography"
+            if quality_marker in prompt:
+                idx = prompt.index(quality_marker)
+                prompt = prompt[:idx] + extra_prompt.strip() + ". " + prompt[idx:]
+            else:
+                prompt = prompt + " " + extra_prompt.strip() + "."
+
+        # Minimalist gets looser controlnet so the model can erase small clutter the depth map picked up
+        if style == "minimalist":
+            conditioning_scale = 0.55
+            guidance_end = 0.65
+        else:
+            conditioning_scale = 0.8
+            guidance_end = 0.8
 
         print(f"Room: {room_type} | Style: {style}")
 
@@ -273,12 +293,12 @@ class Predictor(BasePredictor):
             prompt=prompt,
             control_image=[depth_image],
             control_mode=[2],
-            controlnet_conditioning_scale=[0.8],
-            control_guidance_end=0.8,
-            num_inference_steps=8,
+            controlnet_conditioning_scale=[conditioning_scale],
+            control_guidance_end=guidance_end,
+            num_inference_steps=12,
             guidance_scale=3.5,
-            height=512,
-            width=512,
+            height=768,
+            width=768,
         ).images[0]
 
         fd, tmp = tempfile.mkstemp(suffix=".png")
