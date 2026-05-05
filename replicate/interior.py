@@ -24,14 +24,14 @@ STYLES = {
         },
         "minimalist": {
             "prompt": (
-                "A serene minimalist bedroom interior. Low platform bed with crisp white and warm ivory linen, "
-                "natural light oak hardwood floor, soft warm white walls with subtle texture, "
-                "one slim sculptural nightstand in pale wood, single architectural pendant light in matte white, "
-                "large window with soft natural light flooding the room. "
-                "Warm, calm, breathable space. Floor completely bare and empty. All surfaces completely clear. "
-                "No clothing, no laundry, no clothes on floor, no items on bed except bedding, "
-                "no bags, no shoes, no personal belongings, no decorations, no art, no plants, no rugs. "
-                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
+                "Decluttered bedroom, all clutter removed, bare empty floor, no laundry, no clothing, no random items anywhere on the floor or bed. "
+                "A true minimalist bedroom. Low platform bed with crisp white linen, warm white walls, "
+                "light oak hardwood floor, one slim pale wood nightstand, single matte white pendant light. "
+                "Intentional negative space, only essential objects, nothing excess, every surface bare and empty. "
+                "No art, no rugs, no plants, no shoes, no bags, no personal belongings, no decorations. "
+                "Interior design photography, sharp focus, 8k, photorealistic, ultra realistic photo, "
+                "soft even ambient light, gentle diffused illumination, no harsh sunlight, no bright light rays, subtle shadows, "
+                "realistic textures, DSLR photography, 35mm lens, physically based rendering, high detail surfaces"
             ),
         },
         "scandinavian": {
@@ -68,14 +68,14 @@ STYLES = {
         },
         "minimalist": {
             "prompt": (
-                "A serene minimalist living room interior. Single low-profile sofa in warm ivory or soft greige linen, "
-                "slim pale oak or walnut coffee table, soft warm white walls, light oak hardwood floor, "
-                "one architectural floor lamp in matte white, "
-                "large window with soft natural light flooding the room. "
-                "Warm, calm, breathable space. Floor completely bare and empty. All surfaces completely clear. "
-                "No clothing, no laundry, no items on floor or sofa except cushions, "
-                "no bags, no shoes, no personal belongings, no art, no plants, no rugs, no decorations. "
-                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
+                "Decluttered living room, all clutter removed, bare empty floor, no laundry, no clothing, no random items anywhere on the floor or sofa. "
+                "A true minimalist living room. Single low-profile sofa in warm ivory linen, "
+                "slim pale oak coffee table, warm white walls, light oak hardwood floor, one architectural floor lamp. "
+                "Intentional negative space, only essential objects, nothing excess, every surface bare and empty. "
+                "No art, no rugs, no plants, no cushions, no bags, no personal belongings, no decorations. "
+                "Interior design photography, sharp focus, 8k, photorealistic, ultra realistic photo, "
+                "soft even ambient light, gentle diffused illumination, no harsh sunlight, no bright light rays, subtle shadows, "
+                "realistic textures, DSLR photography, 35mm lens, physically based rendering, high detail surfaces"
             ),
         },
         "scandinavian": {
@@ -111,13 +111,15 @@ STYLES = {
         },
         "minimalist": {
             "prompt": (
-                "A serene minimalist bathroom interior. Floating white vanity with undermount basin, "
-                "warm white plaster or large-format stone walls, light travertine or concrete floor, "
-                "single large frameless mirror, brushed brass or matte black fixtures, recessed warm lighting. "
-                "Warm, calm, spa-like atmosphere. Floor completely bare and empty. All surfaces completely clear. "
-                "No toiletries, no towels on floor, no clothing, no laundry, no personal items visible anywhere, "
-                "no decorations, no plants. "
-                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
+                "Decluttered bathroom, all clutter removed, bare empty floor, no toiletries visible, no laundry, no random items anywhere. "
+                "A true minimalist bathroom. Floating white vanity with undermount basin, "
+                "large-format warm stone or white plaster walls, travertine floor, "
+                "single large frameless mirror, brushed matte black or brass fixtures. "
+                "Intentional negative space, only essential fixtures, nothing excess, every surface bare and empty. "
+                "No toiletries, no towels on floor, no personal items, no decorations, no plants. "
+                "Interior design photography, sharp focus, 8k, photorealistic, ultra realistic photo, "
+                "soft even ambient light, gentle diffused illumination, no harsh sunlight, no bright light rays, subtle shadows, "
+                "realistic textures, DSLR photography, 35mm lens, physically based rendering, high detail surfaces"
             ),
         },
         "spa": {
@@ -147,13 +149,15 @@ STYLES = {
         },
         "minimalist": {
             "prompt": (
-                "A serene minimalist kitchen interior. Seamless handleless cabinets in warm white or soft greige, "
-                "thick stone or concrete countertop, fully integrated hidden appliances, "
-                "warm under-cabinet lighting, light oak or concrete floor. "
-                "Warm, calm, breathable space. Floor completely bare and empty. All counters and surfaces completely clear. "
-                "No dishes, no appliances on counter, no food, no clothing, no laundry, no personal items, "
-                "no decorations, no plants. "
-                "Interior photography, sharp focus, 8k, photorealistic, ultra realistic photo, natural lighting, soft shadows, realistic textures, DSLR photography, 35mm lens, global illumination, physically based rendering, high detail surfaces"
+                "Decluttered kitchen, all clutter removed, bare empty floor, completely clear counters, no random items anywhere. "
+                "A true minimalist kitchen. Seamless handleless cabinets in warm white, "
+                "thick stone countertop, fully integrated hidden appliances, "
+                "warm under-cabinet lighting, light oak or polished concrete floor. "
+                "Intentional negative space, only essential built-ins, nothing on any surface. "
+                "No dishes, no appliances on counter, no food, no personal items, no decorations, no plants. "
+                "Interior design photography, sharp focus, 8k, photorealistic, ultra realistic photo, "
+                "soft even ambient light, gentle diffused illumination, no harsh sunlight, no bright light rays, subtle shadows, "
+                "realistic textures, DSLR photography, 35mm lens, physically based rendering, high detail surfaces"
             ),
         },
         "rustic": {
@@ -274,19 +278,28 @@ class Predictor(BasePredictor):
             else:
                 prompt = prompt + " " + extra_prompt.strip() + "."
 
-        # Minimalist gets looser controlnet so the model can erase small clutter the depth map picked up
+        # Minimalist: text prompt dominates, depth map releases early so FLUX can erase small clutter
         if style == "minimalist":
-            conditioning_scale = 0.55
-            guidance_end = 0.65
+            conditioning_scale = 0.45
+            guidance_end = 0.50
+            guidance_scale = 5.5
         else:
             conditioning_scale = 0.8
             guidance_end = 0.8
+            guidance_scale = 3.5
 
         print(f"Room: {room_type} | Style: {style}")
 
         # Depth map
         depth = self.depth_estimator(input_image)["depth"]
         depth_image = depth.convert("RGB").resize(input_image.size)
+
+        # For minimalist, blur the depth map to erase small-item bumps (laundry, clothes, clutter)
+        # while preserving large structural shapes like walls, floor, and furniture
+        if style == "minimalist":
+            depth_gray = np.array(depth_image.convert("L"))
+            depth_gray = cv2.GaussianBlur(depth_gray, (51, 51), 0)
+            depth_image = Image.fromarray(np.stack([depth_gray] * 3, axis=-1))
 
         # Generate
         result = self.pipe(
@@ -296,7 +309,7 @@ class Predictor(BasePredictor):
             controlnet_conditioning_scale=[conditioning_scale],
             control_guidance_end=guidance_end,
             num_inference_steps=12,
-            guidance_scale=3.5,
+            guidance_scale=guidance_scale,
             height=768,
             width=768,
         ).images[0]
