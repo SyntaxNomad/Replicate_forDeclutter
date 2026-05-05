@@ -203,9 +203,9 @@ class Predictor(BasePredictor):
         )
         controlnet = FluxMultiControlNetModel([controlnet_union])
 
-        print("Loading FLUX schnell pipeline...")
+        print("Loading FLUX dev pipeline...")
         self.pipe = FluxControlNetPipeline.from_pretrained(
-            "black-forest-labs/FLUX.1-schnell",
+            "black-forest-labs/FLUX.1-dev",
             controlnet=controlnet,
             torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
@@ -278,11 +278,10 @@ class Predictor(BasePredictor):
             else:
                 prompt = prompt + " " + extra_prompt.strip() + "."
 
-        # Minimalist: text prompt dominates, depth map releases early so FLUX can erase small clutter
         if style == "minimalist":
-            conditioning_scale = 0.45
-            guidance_end = 0.50
-            guidance_scale = 5.5
+            conditioning_scale = 0.62
+            guidance_end = 0.72
+            guidance_scale = 7.0
         else:
             conditioning_scale = 0.8
             guidance_end = 0.8
@@ -298,7 +297,7 @@ class Predictor(BasePredictor):
         # while preserving large structural shapes like walls, floor, and furniture
         if style == "minimalist":
             depth_gray = np.array(depth_image.convert("L"))
-            depth_gray = cv2.GaussianBlur(depth_gray, (51, 51), 0)
+            depth_gray = cv2.GaussianBlur(depth_gray, (31, 31), 0)
             depth_image = Image.fromarray(np.stack([depth_gray] * 3, axis=-1))
 
         # Generate
@@ -308,7 +307,7 @@ class Predictor(BasePredictor):
             control_mode=[2],
             controlnet_conditioning_scale=[conditioning_scale],
             control_guidance_end=guidance_end,
-            num_inference_steps=12,
+            num_inference_steps=25,
             guidance_scale=guidance_scale,
             height=768,
             width=768,
