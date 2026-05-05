@@ -1,8 +1,6 @@
 import os
 from typing import Optional
 import torch
-import numpy as np
-import cv2
 import tempfile
 from PIL import Image
 from cog import BasePredictor, Input, Path, Secret
@@ -281,7 +279,7 @@ class Predictor(BasePredictor):
         if style == "minimalist":
             conditioning_scale = 0.62
             guidance_end = 0.72
-            guidance_scale = 7.0
+            guidance_scale = 5.0
         else:
             conditioning_scale = 0.8
             guidance_end = 0.8
@@ -293,12 +291,6 @@ class Predictor(BasePredictor):
         depth = self.depth_estimator(input_image)["depth"]
         depth_image = depth.convert("RGB").resize(input_image.size)
 
-        # For minimalist, blur the depth map to erase small-item bumps (laundry, clothes, clutter)
-        # while preserving large structural shapes like walls, floor, and furniture
-        if style == "minimalist":
-            depth_gray = np.array(depth_image.convert("L"))
-            depth_gray = cv2.GaussianBlur(depth_gray, (31, 31), 0)
-            depth_image = Image.fromarray(np.stack([depth_gray] * 3, axis=-1))
 
         # Generate
         result = self.pipe(
